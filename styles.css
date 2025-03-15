@@ -1,0 +1,140 @@
+/* Fuente moderna */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+}
+
+/* Contenedor principal con efecto glassmorphism */
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 350px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Logo */
+.logo {
+    width: 100px;
+    display: block;
+    margin: 0 auto 15px;
+}
+
+/* Título */
+h2 {
+    color: white;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Campos de entrada */
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    transition: 0.3s;
+}
+
+/* Placeholder en color blanco */
+input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+input:focus {
+    background: rgba(255, 255, 255, 0.5);
+    transform: scale(1.02);
+}
+
+/* Botones */
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+/* Botón de inicio de sesión */
+#loginBtn {
+    background: #28a745;
+    color: white;
+}
+
+#loginBtn:hover {
+    background: #218838;
+    transform: scale(1.05);
+}
+
+/* Botón de cerrar sesión */
+#logoutBtn {
+    background: #dc3545;
+    color: white;
+    display: none;
+}
+
+#logoutBtn:hover {
+    background: #c82333;
+    transform: scale(1.05);
+}
+
+/* Mensaje de bienvenida */
+#welcomeMessage {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    margin-top: 15px;
+}
+
+/* Animación del botón de carga */
+.loading {
+    position: relative;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    width: 14px;
+    height: 14px;
+    border: 3px solid white;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 0.8s linear infinite;
+    transform: translateY(-50%);
+}
+
+/* Efecto de carga */
+@keyframes spin {
+    from {
+        transform: translateY(-50%) rotate(0deg);
+    }
+    to {
+        transform: translateY(-50%) rotate(360deg);
+    }
+}
